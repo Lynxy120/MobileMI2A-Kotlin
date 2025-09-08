@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".intent.GajiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gaji"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NIP"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="ex : 2401092003"
+            android:paddingBottom="10dp"
+            android:id="@+id/etNIP"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="ex : Arzhie Zhafran"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/etNama"
+            android:drawableStart="@drawable/person"
+            android:drawableTint="#44F252"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Lahir"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/calender"
+            android:background="#E2E2E2"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tvTgl"
+            android:drawableTint="#44F252"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jam Pembayaran"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/time"
+            android:background="#E2E2E2"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tvJam"
+            android:drawableTint="#44F252"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status Pegawai"
+            android:layout_marginBottom="10dp"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/rdStatus"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Single"
+                android:layout_marginEnd="20dp"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menikah"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Anak"
+            android:layout_marginBottom="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="ex : 1"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/etAnak"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Golongan"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="#E2E2E2"
+            android:id="@+id/spGol"
+            android:spinnerMode="dropdown"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pendapatan Lain"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TableRow>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Uang Makan/Hari Rp.30000"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/chkMakan"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Hari : 1"
+                    android:inputType="number"
+                    android:id="@+id/etMakan"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lembur/Hari Rp.25000"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/chkLembur"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Hari : 1"
+                    android:inputType="number"
+                    android:id="@+id/etLembur"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dinas Luar/Hari Rp.35000"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/chkDinas"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="ex : 1"
+                    android:inputType="number"
+                    android:id="@+id/etDinas"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Simpan"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btnSimpan"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

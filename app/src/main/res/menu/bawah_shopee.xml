@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="Beranda"
+        android:icon="@drawable/home"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/bottom_trending"
+        android:title="Trending"
+        android:icon="@drawable/trend"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/bottom_Live"
+        android:title="Live dan Video"
+        android:icon="@drawable/live"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/bottom_Notif"
+        android:title="Notifikasi"
+        android:icon="@drawable/notif"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/bottom_Saya"
+        android:title="Saya"
+        android:icon="@drawable/person"
+        app:showAsAction="never"
+        />
+
+</menu>

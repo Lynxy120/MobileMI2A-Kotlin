@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lady Furina</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="belajar_ui">Belajar Layout</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_rsactivity">RSActivity</string>
+</resources>

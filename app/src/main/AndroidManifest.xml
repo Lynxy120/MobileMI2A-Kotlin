@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MobileMI2AKotlin">
+        <activity
+            android:name=".list.recycler.grid.Dosen.DetailDosenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sqlite.EditNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sqlite.TambahNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sqlite.ProdiTambahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".list.recycler.grid.Dosen.GridDosenActivity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDN_43ijg78cfmq3sMZxZoE8JlhJL3U68o" />
+        <activity
+            android:name=".map.RSActivity"
+            android:exported="false"
+            android:label="@string/title_activity_rsactivity" />
+        <activity
+            android:name=".list.recycler.grid.Produk.GridRecyclerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".map.MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".list.recycler.grid.Produk.DetailProdukActivity"
+            android:exported="false" />
+        <activity
+            android:name=".list.recycler.linear.LinearRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".list.recycler.linear.lat.ListsekolahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".list.recycler.linear.lat.DetailSekolahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".list.recycler.linear.DetailBeritaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".list.array_adapter.ListArrayAdapterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.FormPegawaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.MinumanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.HasilGajiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.GajiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.MinumanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.HasilMinumanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.ShopeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.HasilPegawaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.HasilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intent.ExplicitIntentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.RelativeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DataDiriActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ConstraintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TextActivity"
+            android:exported="false" />
+        <activity android:name=".apk.TableActivity" />
+        <activity android:name=".apk.FormActivity" />
+        <activity
+            android:name=".ui.ScrollViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".apk.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LinearVerticalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LinearHorizontalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.FormMahasiswaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TableLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sqlite.NoteActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

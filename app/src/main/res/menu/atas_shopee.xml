@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Keranjang"
+        app:showAsAction="ifRoom"
+        android:id="@+id/top_Shop"
+        android:icon="@drawable/order"
+        />
+
+    <item
+        android:title="Chat"
+        app:showAsAction="ifRoom"
+        android:id="@+id/top_Chat"
+        android:icon="@drawable/chat"
+        />
+
+</menu>
