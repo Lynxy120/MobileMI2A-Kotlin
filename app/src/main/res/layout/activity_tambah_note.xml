@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
     tools:context=".sqlite.TambahNoteActivity">
 
     <TextView
@@ -15,8 +15,8 @@
         android:text="Tambah Note"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="15sp"
         android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
         />
     <EditText
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:id="@+id/etKontent"
+        android:id="@+id/etContent"
         android:hint="Isi Dari Catatan"
         android:gravity="top"
         android:padding="12dp"
@@ -38,10 +38,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simpan"
+        android:text="SIMPAN"
         android:id="@+id/btnSimpan"
         android:layout_marginTop="10dp"
         />
 
 </LinearLayout>
-

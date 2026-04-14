@@ -1,8 +1,8 @@
 package arzhie.zhafran.mobilemi2akotlin.sqlite.model
 
-class NoteModel (
+data class NoteModel(
     val id: Int = 0,
     val title: String,
-    val kontent: String
+    val content: String
 )
 

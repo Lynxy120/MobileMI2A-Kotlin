@@ -13,7 +13,7 @@ class NoteDao(context: Context){
         val db = dbHelper.writableDatabase
         val values = ContentValues()
         values.put("title",note.title)
-        values.put("kontent", note.kontent)
+        values.put("kontent", note.content)
         val result = db.insert("note", null, values)
         return result != -1L
 
@@ -45,7 +45,7 @@ class NoteDao(context: Context){
         val db = dbHelper.writableDatabase
         val values = ContentValues()
         values.put("title", note.title)
-        values.put("kontent", note.kontent)
+        values.put("kontent", note.content)
         val result = db.update("note", values, "id=?",
             arrayOf(id.toString()))
         return result > 0

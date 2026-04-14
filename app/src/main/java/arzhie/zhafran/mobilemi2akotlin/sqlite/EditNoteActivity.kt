@@ -46,7 +46,7 @@ class EditNoteActivity : AppCompatActivity() {
                 val noteDao = NoteDao(this)
                 val noteModel = NoteModel(
                     title = etTitle.text.toString(),
-                    kontent = etKontent.text.toString()
+                    content = etKontent.text.toString()
                 )
                 val update = noteDao.updateNote(bundle.getInt("id",
                     0), noteModel)

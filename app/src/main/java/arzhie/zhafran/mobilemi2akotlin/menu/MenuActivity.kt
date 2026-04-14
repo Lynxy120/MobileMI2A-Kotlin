@@ -13,6 +13,9 @@ import androidx.core.view.WindowInsetsCompat
 import arzhie.zhafran.mobilemi2akotlin.R
 import arzhie.zhafran.mobilemi2akotlin.intent.GajiActivity
 import arzhie.zhafran.mobilemi2akotlin.intent.MinumanActivity
+import arzhie.zhafran.mobilemi2akotlin.map.MapsActivity
+import arzhie.zhafran.mobilemi2akotlin.sqlite.NoteActivity
+import arzhie.zhafran.mobilemi2akotlin.sqlite.ProdiTambahActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MenuActivity : AppCompatActivity() {
@@ -36,8 +39,8 @@ class MenuActivity : AppCompatActivity() {
 
         bottomNav.setOnItemSelectedListener { item ->
             when(item.itemId){
-                R.id.bottom_home -> {
-                    Toast.makeText(applicationContext, "Home", Toast.LENGTH_SHORT).show()
+                   R.id.bottom_home -> {
+                    startActivity(Intent(this@MenuActivity, NoteActivity::class.java))
                     true
                 }
                 R.id.bottom_order -> {
@@ -57,11 +60,11 @@ class MenuActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.top_logout -> {
-                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@MenuActivity, MapsActivity::class.java))
                 true
             }
             R.id.top_group -> {
-                startActivity(Intent(this@MenuActivity, GajiActivity::class.java))
+                startActivity(Intent(this@MenuActivity, ProdiTambahActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

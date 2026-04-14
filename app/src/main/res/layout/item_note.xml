@@ -34,13 +34,13 @@
                     android:maxLines="2" />
 
                 <TextView
-                    android:id="@+id/tvKontent"
+                    android:id="@+id/tvContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Isi Catatan Harian"
                     android:textSize="15sp"
                     android:maxLines="3"
-                    android:textColor="#454545"
+                    android:textColor="#9E9E9E"
                     android:layout_marginTop="6dp" />
             </LinearLayout>
 

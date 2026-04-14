@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import arzhie.zhafran.mobilemi2akotlin.R
 import arzhie.zhafran.mobilemi2akotlin.sqlite.adapter.NoteAdapter
@@ -31,53 +33,48 @@ class NoteActivity : AppCompatActivity() {
             insets
         }
         rvNote = findViewById(R.id.rvNote)
+        rvNote.layoutManager = LinearLayoutManager(this)
         fabTambahNote = findViewById(R.id.fabTambahNote)
     }
+
     override fun onStart() {
         super.onStart()
         fabTambahNote.setOnClickListener {
-            startActivity(
-                Intent(
-                    this@NoteActivity,
-                    TambahNoteActivity::class.java
-                )
-            )
+            startActivity(android.content.Intent(this@NoteActivity,
+                TambahNoteActivity::class.java))
         }
         getAllData()
     }
-    private fun getAllData(){
+
+    private fun getAllData() {
         val noteDao = NoteDao(this)
         notes = noteDao.getAllNote().toMutableList()
-        noteAdapter = NoteAdapter(notes,
-            object : NoteAdapter.OnAdapterListener{
-                override fun onClick(data: NoteModel) {
-                    val bundle = Bundle()
-                    bundle.putInt("id", data.id)
-                    bundle.putString("title", data.title)
-                    bundle.putString("kontent", data.kontent)
-                    val intent = Intent(this@NoteActivity, EditNoteActivity::class.java)
-                    intent.putExtras(bundle)
-                    startActivity(intent)
-                }
-
-                override fun onLongClick(
-                    data: NoteModel,
-                    position: Int
-                ) {
-                    val delete = noteDao.deleteNote(data.id)
-                    if(delete){
-                        notes.removeAt(position)
-                        noteAdapter.notifyItemRemoved(position)
-                    }else{
-                        Toast.makeText(
-                            this@NoteActivity,
-                            "Data gagal dihapus",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-            })
+        noteAdapter = NoteAdapter(notes) { note ->
+            deleteNote(note)
+        }
         rvNote.adapter = noteAdapter
-        Log.d("NoteActivity",notes.toString())
+        Log.d("NoteActivity", notes.toString())
+    }
+
+    private fun deleteNote(note: NoteModel) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Hapus Catatan")
+        builder.setMessage("Apakah Anda yakin ingin menghapus catatan ini?")
+        builder.setPositiveButton("Ya") { dialog, _ ->
+            val noteDao = NoteDao(this)
+            val isDeleted = noteDao.deleteNote(note.id)
+
+            if (isDeleted) {
+                Toast.makeText(this, "Catatan berhasil dihapus", Toast.LENGTH_SHORT).show()
+                getAllData()
+            } else {
+                Toast.makeText(this, "Gagal menghapus catatan", Toast.LENGTH_SHORT).show()
+            }
+            dialog.dismiss()
+        }
+        builder.setNegativeButton("Batal") { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.show()
     }
 }

@@ -28,7 +28,7 @@
             android:name=".sqlite.ProdiTambahActivity"
             android:exported="false" />
         <activity
-            android:name=".list.recycler.grid.Dosen.GridDosenActivity"
+            android:name=".map.MapsActivity"
             android:exported="false" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -42,7 +42,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".map.MapsActivity"
+            android:name=".sqlite.NoteActivity"
             android:exported="false" />
         <activity
             android:name=".list.recycler.grid.Produk.DetailProdukActivity"
@@ -66,7 +66,7 @@
             android:name=".widgets.FormPegawaiActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.MenuActivity"
+            android:name=".list.recycler.grid.Dosen.GridDosenActivity"
             android:exported="false" />
         <activity
             android:name=".intent.MinumanActivity"
@@ -131,7 +131,7 @@
             android:name=".ui.TableLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".sqlite.NoteActivity"
+            android:name=".menu.MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
